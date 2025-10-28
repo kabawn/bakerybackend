@@ -1,3 +1,5 @@
+import dns from "node:dns";
+dns.setDefaultResultOrder("ipv4first"); // prefer IPv4 over IPv6
 import dotenv from "dotenv";
 import pkg from "pg";
 const { Pool } = pkg;
