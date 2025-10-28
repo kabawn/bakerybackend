@@ -28,6 +28,9 @@ import inventoryRouter from "./routes/inventory.js";
 import leftoverRouter from "./routes/leftover.js";
 import kpiRouter from "./routes/kpi.js";
 import preparationsRouter from "./routes/preparations.js";
+app.get("/", (req, res) => {
+   res.json({ ok: true, name: "bakery-api", status: "running" });
+});
 
 app.use("/products", productsRouter);
 app.use("/movements", movementsRouter);
