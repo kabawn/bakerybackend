@@ -28,6 +28,8 @@ import inventoryRouter from "./routes/inventory.js";
 import leftoverRouter from "./routes/leftover.js";
 import kpiRouter from "./routes/kpi.js";
 import preparationsRouter from "./routes/preparations.js";
+import recommendationsRouter from "./routes/recommendations.js";
+
 app.get("/", (req, res) => {
    res.json({ ok: true, name: "bakery-api", status: "running" });
 });
@@ -38,4 +40,6 @@ app.use("/inventory", inventoryRouter);
 app.use("/leftover", leftoverRouter);
 app.use("/kpi", kpiRouter);
 app.use("/preparations", preparationsRouter);
+app.use("/recommendations", recommendationsRouter);
+
 export default app;
